@@ -27,8 +27,8 @@ Aplikasi ini memiliki dua bagian utama:
 
 ### 1 Clone Project
 ```bash
-git clone https://github.com/username/product-management.git
-cd product-management
+git https://github.com/elvinhndrwn/product-service.git
+cd product-service
 ```
 
 ### 2 Clone Project
