@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ProductService {
@@ -18,6 +19,8 @@ public class ProductService {
     }
 
     public Product create(Product p) {
+        String product = p.getName().substring(0, 1);
+        p.setProductCode(product.concat("-").concat(UUID.randomUUID().toString()));
         p.setCreatedAt(Instant.now());
         return repo.save(p);
     }

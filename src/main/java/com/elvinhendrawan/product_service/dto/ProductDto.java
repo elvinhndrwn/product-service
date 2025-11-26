@@ -17,4 +17,6 @@ public class ProductDto {
     @NotNull
     @DecimalMin(value = "0.01", inclusive = true)
     private BigDecimal price;
+
+    private String productCode;
 }

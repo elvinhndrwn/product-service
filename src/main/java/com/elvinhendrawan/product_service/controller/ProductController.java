@@ -27,7 +27,7 @@ public class ProductController {
     }
 
     private ProductDto toDto(Product p) {
-        return new ProductDto(p.getId(), p.getName(), p.getDescription(), p.getPrice());
+        return new ProductDto(p.getId(), p.getName(), p.getDescription(), p.getPrice(), p.getProductCode());
     }
 
     private Product toEntity(ProductDto dto) {
@@ -36,6 +36,7 @@ public class ProductController {
         p.setName(dto.getName());
         p.setDescription(dto.getDescription());
         p.setPrice(dto.getPrice());
+        p.setProductCode(dto.getProductCode());
         return p;
     }
 

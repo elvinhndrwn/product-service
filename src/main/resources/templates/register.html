@@ -21,13 +21,13 @@
                 <input type="password" id="password" class="form-control" required/>
             </div>
 
-            <div class="mb-3">
-                <label for="role" class="form-label">Role</label>
-                <select id="role" class="form-select">
-                    <option value="USER" selected>User</option>
-                    <option value="ADMIN">Admin</option>
-                </select>
-            </div>
+<!--            <div class="mb-3">-->
+<!--                <label for="role" class="form-label">Role</label>-->
+<!--                <select id="role" class="form-select">-->
+<!--                    <option value="USER" selected>User</option>-->
+<!--                    <option value="ADMIN">Admin</option>-->
+<!--                </select>-->
+<!--            </div>-->
 
             <button type="submit" class="btn btn-success w-100">Register</button>
         </form>
@@ -44,7 +44,7 @@
 
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-        const role = document.getElementById('role').value;
+        const role = 'USER';
 
         const res = await fetch('/api/auth/register', {
             method: 'POST',

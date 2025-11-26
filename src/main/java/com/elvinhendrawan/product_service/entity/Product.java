@@ -29,4 +29,7 @@ public class Product {
 
     @Column(nullable = false)
     private Instant createdAt = Instant.now();
+
+    @Column(name = "product_code")
+    private String productCode;
 }
